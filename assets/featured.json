@@ -1,0 +1,27 @@
+[
+  {
+  "title":"Romance",
+  "text":"Buku Wik wik",
+    "img": "https://manybooks.net/sites/default/files/styles/220x330sc/public/2018-06/49.jpg?itok=mmlKB9p-"
+  },
+  {
+    "title":"Adventure",
+    "text":"Jane Aere",
+    "img": "https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-cust-1239.jpg?itok=YbkhyBW3"
+  },
+  {
+    "title":"Horror",
+    "text":"Jason Brandt",
+    "img": "https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-cust-13095.jpg?itok=H0c1QL8Y"
+  },
+  {
+    "title":"Humor",
+    "text":"The Pickwick Papers",
+    "img": "https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-orig-2202.jpg?itok=aYkfegTA"
+  },
+  {
+    "title":"Science",
+    "text":"The Trial",
+    "img": "https://manybooks.net/sites/default/files/styles/220x330sc/public/2020-10/titan.jpg?itok=SJAJxFK4"
+  }  
+]
