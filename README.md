@@ -1,6 +1,6 @@
-# catatan
+# Dames ( Database Games ) FREE !!!
 
-A new Flutter project.
+is a game databases that allows to search a free games within the app, this app does not inlcude any ads so you can just enjoy an find your fav games. .
 
 ## Getting Started
 
