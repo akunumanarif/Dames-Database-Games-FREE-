@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dashboard.dart';
 import '../models/gamesList.dart';
 import '../services/service.dart';
+import '../screens/customLoader/loader.dart';
 
 class FeaturedGames extends StatelessWidget {
   final FeaturedApi featuredApi = FeaturedApi();
@@ -131,7 +132,7 @@ class FeaturedGames extends StatelessWidget {
                         ),
                       );
                     }
-                    return Center(child: CircularProgressIndicator());
+                    return Center(child: CustomLoader());
                   },
                 ),
               ),

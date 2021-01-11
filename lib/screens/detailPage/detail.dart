@@ -106,7 +106,7 @@ class _DetailPageState extends State<DetailPage> {
                         SizedBox(
                           height: 25,
                         ),
-                        Expanded(
+                        Container(
                           child: DefaultTabController(
                               length: 2,
                               child: Column(
@@ -129,244 +129,21 @@ class _DetailPageState extends State<DetailPage> {
                                           text: 'Description',
                                         ),
                                       ]),
-                                  Expanded(
-                                    child: Container(
-                                      height: 100,
-                                      child: TabBarView(children: [
-                                        SingleChildScrollView(
-                                          child: Column(
-                                            children: [
-                                              SizedBox(
-                                                height: 10,
-                                              ),
-                                              Container(
-                                                height: MediaQuery.of(context)
-                                                        .size
-                                                        .height /
-                                                    3.8,
-                                                width: MediaQuery.of(context)
-                                                    .size
-                                                    .width,
-                                                decoration: BoxDecoration(
-                                                    color: Colors.green[100],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10)),
-                                                child: Column(
-                                                  children: [
-                                                    Row(
-                                                      children: [
-                                                        Column(
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      top: 15,
-                                                                      left: 20),
-                                                              child: Column(
-                                                                // textDirection:
-                                                                //     TextDirection.ltr,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  Padding(
-                                                                    padding: const EdgeInsets
-                                                                            .only(
-                                                                        left: 8,
-                                                                        top:
-                                                                            15),
-                                                                    child: Text(
-                                                                      'Platform',
-                                                                      style:
-                                                                          TextStyle(
-                                                                        color: Colors
-                                                                            .black26,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  SizedBox(
-                                                                    height: 10,
-                                                                  ),
-                                                                  Padding(
-                                                                    padding: const EdgeInsets
-                                                                            .only(
-                                                                        left: 8,
-                                                                        top: 0),
-                                                                    child:
-                                                                        Container(
-                                                                      //color: Colors.red,
-                                                                      height:
-                                                                          30,
-                                                                      width:
-                                                                          140,
-                                                                      child:
-                                                                          Text(
-                                                                        widget
-                                                                            .gameList
-                                                                            .platform,
-                                                                        style: TextStyle(
-                                                                            color:
-                                                                                Colors.black),
-                                                                        maxLines:
-                                                                            4,
-                                                                        overflow:
-                                                                            TextOverflow.clip,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                        // Divider(
-                                                        //   endIndent: 5,
-                                                        // ),
-                                                        Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                          .only(
-                                                                      top: 15,
-                                                                      left: 20),
-                                                              child: Column(
-                                                                textDirection:
-                                                                    TextDirection
-                                                                        .ltr,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  Padding(
-                                                                    padding: const EdgeInsets
-                                                                            .only(
-                                                                        left: 8,
-                                                                        top:
-                                                                            15),
-                                                                    child: Text(
-                                                                      'Publisher',
-                                                                      style:
-                                                                          TextStyle(
-                                                                        color: Colors
-                                                                            .black26,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  SizedBox(
-                                                                    height: 10,
-                                                                  ),
-                                                                  Padding(
-                                                                    padding: const EdgeInsets
-                                                                            .only(
-                                                                        left: 8,
-                                                                        top: 0),
-                                                                    child:
-                                                                        Container(
-                                                                      //color: Colors.amber,
-                                                                      height:
-                                                                          30,
-                                                                      width:
-                                                                          140,
-                                                                      child:
-                                                                          Text(
-                                                                        widget
-                                                                            .gameList
-                                                                            .publisher,
-                                                                        style: TextStyle(
-                                                                            color:
-                                                                                Colors.black),
-                                                                        maxLines:
-                                                                            4,
-                                                                        overflow:
-                                                                            TextOverflow.clip,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    Row(
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .only(
-                                                                  top: 15,
-                                                                  left: 0),
-                                                          child: Column(
-                                                            textDirection:
-                                                                TextDirection
-                                                                    .ltr,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        left:
-                                                                            140,
-                                                                        top:
-                                                                            5),
-                                                                child: Text(
-                                                                  'Release',
-                                                                  style:
-                                                                      TextStyle(
-                                                                    color: Colors
-                                                                        .black26,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                height: 10,
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .only(
-                                                                        left:
-                                                                            130,
-                                                                        top: 0),
-                                                                child: Text(
-                                                                  widget
-                                                                      .gameList
-                                                                      .releaseDate,
-                                                                  style: TextStyle(
-                                                                      color: Colors
-                                                                          .black),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    )
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Column(
+                                  Container(
+                                    height: MediaQuery.of(context).size.height /
+                                        3.8,
+                                    child: TabBarView(children: [
+                                      SingleChildScrollView(
+                                        child: Column(
                                           children: [
                                             SizedBox(
-                                              height: 20,
+                                              height: 10,
                                             ),
                                             Container(
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .height /
-                                                  4,
+                                                  3.8,
                                               width: MediaQuery.of(context)
                                                   .size
                                                   .width,
@@ -375,19 +152,153 @@ class _DetailPageState extends State<DetailPage> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           10)),
-                                              child: Row(
+                                              child: Column(
                                                 children: [
-                                                  Column(
+                                                  Row(
+                                                    children: [
+                                                      Column(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 15,
+                                                                    left: 20),
+                                                            child: Column(
+                                                              // textDirection:
+                                                              //     TextDirection.ltr,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 8,
+                                                                      top: 15),
+                                                                  child: Text(
+                                                                    'Platform',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      color: Colors
+                                                                          .black26,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                SizedBox(
+                                                                  height: 10,
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 8,
+                                                                      top: 0),
+                                                                  child:
+                                                                      Container(
+                                                                    //color: Colors.red,
+                                                                    height: 30,
+                                                                    width: 140,
+                                                                    child: Text(
+                                                                      widget
+                                                                          .gameList
+                                                                          .platform,
+                                                                      style: TextStyle(
+                                                                          color:
+                                                                              Colors.black),
+                                                                      maxLines:
+                                                                          4,
+                                                                      overflow:
+                                                                          TextOverflow
+                                                                              .clip,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      // Divider(
+                                                      //   endIndent: 5,
+                                                      // ),
+                                                      Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 15,
+                                                                    left: 20),
+                                                            child: Column(
+                                                              textDirection:
+                                                                  TextDirection
+                                                                      .ltr,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: [
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 8,
+                                                                      top: 15),
+                                                                  child: Text(
+                                                                    'Publisher',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      color: Colors
+                                                                          .black26,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                SizedBox(
+                                                                  height: 10,
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsets
+                                                                          .only(
+                                                                      left: 8,
+                                                                      top: 0),
+                                                                  child:
+                                                                      Container(
+                                                                    //color: Colors.amber,
+                                                                    height: 30,
+                                                                    width: 140,
+                                                                    child: Text(
+                                                                      widget
+                                                                          .gameList
+                                                                          .publisher,
+                                                                      style: TextStyle(
+                                                                          color:
+                                                                              Colors.black),
+                                                                      maxLines:
+                                                                          4,
+                                                                      overflow:
+                                                                          TextOverflow
+                                                                              .clip,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
                                                     children: [
                                                       Padding(
                                                         padding:
                                                             const EdgeInsets
                                                                     .only(
-                                                                top: 30,
-                                                                left: 70),
+                                                                top: 15,
+                                                                left: 0),
                                                         child: Column(
-                                                          // textDirection:
-                                                          //     TextDirection.ltr,
+                                                          textDirection:
+                                                              TextDirection.ltr,
                                                           crossAxisAlignment:
                                                               CrossAxisAlignment
                                                                   .start,
@@ -396,10 +307,10 @@ class _DetailPageState extends State<DetailPage> {
                                                               padding:
                                                                   const EdgeInsets
                                                                           .only(
-                                                                      left: 8,
-                                                                      top: 15),
+                                                                      left: 140,
+                                                                      top: 5),
                                                               child: Text(
-                                                                'Description',
+                                                                'Release',
                                                                 style:
                                                                     TextStyle(
                                                                   color: Colors
@@ -414,37 +325,110 @@ class _DetailPageState extends State<DetailPage> {
                                                               padding:
                                                                   const EdgeInsets
                                                                           .only(
-                                                                      left: 8,
+                                                                      left: 130,
                                                                       top: 0),
-                                                              child: Container(
-                                                                width: 200,
-                                                                height: 100,
-                                                                child: Text(
-                                                                  widget
-                                                                      .gameList
-                                                                      .shortDescription,
-                                                                  style: TextStyle(
-                                                                      color: Colors
-                                                                          .black),
-                                                                  maxLines: 4,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .clip,
-                                                                ),
+                                                              child: Text(
+                                                                widget.gameList
+                                                                    .releaseDate,
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .black),
                                                               ),
                                                             ),
                                                           ],
                                                         ),
                                                       ),
                                                     ],
-                                                  ),
+                                                  )
                                                 ],
                                               ),
                                             ),
                                           ],
                                         ),
-                                      ]),
-                                    ),
+                                      ),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                4,
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            decoration: BoxDecoration(
+                                                color: Colors.green[100],
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: Row(
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 30,
+                                                              left: 70),
+                                                      child: Column(
+                                                        // textDirection:
+                                                        //     TextDirection.ltr,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 8,
+                                                                    top: 15),
+                                                            child: Text(
+                                                              'Description',
+                                                              style: TextStyle(
+                                                                color: Colors
+                                                                    .black26,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                            height: 10,
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 8,
+                                                                    top: 0),
+                                                            child: Container(
+                                                              width: 200,
+                                                              height: 100,
+                                                              child: Text(
+                                                                widget.gameList
+                                                                    .shortDescription,
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .black),
+                                                                maxLines: 4,
+                                                                overflow:
+                                                                    TextOverflow
+                                                                        .clip,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ]),
                                   ),
                                 ],
                               )),
@@ -462,32 +446,33 @@ class _DetailPageState extends State<DetailPage> {
               top: MediaQuery.of(context).size.height / 12,
               left: MediaQuery.of(context).size.width / 2.8,
               //right: 20,
-              child: Container(
-                child: Hero(
-                    tag: widget.gameList.thumbnail,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        widget.gameList.thumbnail,
-                        fit: BoxFit.fill,
-                      ),
-                    )),
-                width: 100,
-                height: 100,
-                // color: Colors.red,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(1.0, 4.0), //(x,y)
-                      blurRadius: 10.0,
-                    )
-                  ],
-                  // borderRadius: BorderRadius.circular(10),
-                  // image: DecorationImage(
-                  //   fit: BoxFit.fill,
-                  //   image: NetworkImage(widget.gameList.thumbnail),
-                  // )
+              child: Hero(
+                tag: widget.gameList.thumbnail,
+                              child: Container(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(
+                      widget.gameList.thumbnail,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  width: 100,
+                  height: 100,
+                  // color: Colors.red,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(1.0, 4.0), //(x,y)
+                        blurRadius: 10.0,
+                      )
+                    ],
+                    // borderRadius: BorderRadius.circular(10),
+                    // image: DecorationImage(
+                    //   fit: BoxFit.fill,
+                    //   image: NetworkImage(widget.gameList.thumbnail),
+                    // )
+                  ),
                 ),
               )),
           Positioned(
@@ -496,20 +481,18 @@ class _DetailPageState extends State<DetailPage> {
               child: Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: GestureDetector(
-                    child: Expanded(
-                      child: Container(
-                        child: Center(
-                            child: Text(
-                          'Go to Game Site',
-                          style: GoogleFonts.oswald(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        )),
-                        height: 50,
-                        width: MediaQuery.of(context).size.width / 2,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green[700]),
-                      ),
+                    child: Container(
+                      child: Center(
+                          child: Text(
+                        'Go to Game Site',
+                        style: GoogleFonts.oswald(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      )),
+                      height: 50,
+                      width: MediaQuery.of(context).size.width / 2,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green[700]),
                     ),
                     onTap: () {
                       setState(() {
@@ -831,8 +814,7 @@ class _DetailFromPlatformState extends State<DetailFromPlatform> {
                                                                             .only(
                                                                         left:
                                                                             140,
-                                                                        top:
-                                                                            5),
+                                                                        top: 5),
                                                                 child: Text(
                                                                   'Release',
                                                                   style:
@@ -977,32 +959,33 @@ class _DetailFromPlatformState extends State<DetailFromPlatform> {
               top: MediaQuery.of(context).size.height / 12,
               left: MediaQuery.of(context).size.width / 2.8,
               //right: 20,
-              child: Container(
-                child: Hero(
-                    tag: widget.gameListPlat.thumbnail,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        widget.gameListPlat.thumbnail,
-                        fit: BoxFit.fill,
-                      ),
-                    )),
-                width: 100,
-                height: 100,
-                // color: Colors.red,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(1.0, 4.0), //(x,y)
-                      blurRadius: 10.0,
-                    )
-                  ],
-                  // borderRadius: BorderRadius.circular(10),
-                  // image: DecorationImage(
-                  //   fit: BoxFit.fill,
-                  //   image: NetworkImage(widget.gameList.thumbnail),
-                  // )
+              child: Hero(
+                tag: widget.gameListPlat.thumbnail,
+                child: Container(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(
+                      widget.gameListPlat.thumbnail,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  width: 100,
+                  height: 100,
+                  // color: Colors.red,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(1.0, 4.0), //(x,y)
+                        blurRadius: 10.0,
+                      )
+                    ],
+                    // borderRadius: BorderRadius.circular(10),
+                    // image: DecorationImage(
+                    //   fit: BoxFit.fill,
+                    //   image: NetworkImage(widget.gameList.thumbnail),
+                    // )
+                  ),
                 ),
               )),
           Positioned(
@@ -1011,20 +994,18 @@ class _DetailFromPlatformState extends State<DetailFromPlatform> {
               child: Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10),
                   child: GestureDetector(
-                    child: Expanded(
-                      child: Container(
-                        child: Center(
-                            child: Text(
-                          'Go to Game Site',
-                          style: GoogleFonts.oswald(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        )),
-                        height: 50,
-                        width: MediaQuery.of(context).size.width / 2,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.green[700]),
-                      ),
+                    child: Container(
+                      child: Center(
+                          child: Text(
+                        'Go to Game Site',
+                        style: GoogleFonts.oswald(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      )),
+                      height: 50,
+                      width: MediaQuery.of(context).size.width / 2,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.green[700]),
                     ),
                     onTap: () {
                       setState(() {

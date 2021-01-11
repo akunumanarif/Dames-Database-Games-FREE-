@@ -2,6 +2,9 @@ import 'package:catatan/screens/detailPage/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:catatan/services/service.dart';
 import '../models/gamesList.dart';
+import '../screens/customLoader/loader.dart';
+
+
 
 class AllGames extends StatelessWidget {
   final GameApi apiManager = GameApi();
@@ -42,14 +45,12 @@ class AllGames extends StatelessWidget {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => DetailPage(
                                           gameList: gamesList,
-                                        )
-                                        )
-                                        ),
+                                        ))),
                           ),
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }
@@ -77,7 +78,8 @@ class MmorpgGames extends StatelessWidget {
                 children: gameData
                     .map((GameList gamesList) => Card(
                           child: InkResponse(
-                            child: Container(color: Colors.black,
+                            child: Container(
+                              color: Colors.black,
                               child: Hero(
                                   tag: gamesList.thumbnail,
                                   child: ClipRRect(
@@ -97,7 +99,7 @@ class MmorpgGames extends StatelessWidget {
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }
@@ -146,7 +148,7 @@ class ShooterGames extends StatelessWidget {
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }
@@ -195,7 +197,7 @@ class MmoGames extends StatelessWidget {
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }
@@ -244,7 +246,7 @@ class StrategyGames extends StatelessWidget {
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }
@@ -293,7 +295,7 @@ class RacingGames extends StatelessWidget {
                         ))
                     .toList());
           }
-          return Center(child: CircularProgressIndicator());
+          return Center(child: CustomLoader());
         });
   }
 }

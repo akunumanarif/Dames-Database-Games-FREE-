@@ -2,6 +2,7 @@ import 'package:catatan/models/gameByPlatforms.dart';
 import 'package:catatan/screens/detailPage/detail.dart';
 import 'package:catatan/services/platforms.dart';
 import 'package:flutter/material.dart';
+import '../screens/customLoader/loader.dart';
 
 class GamesByAllPlatform extends StatelessWidget {
   final PlatformsApi platformsApi = PlatformsApi();
@@ -48,7 +49,7 @@ class GamesByAllPlatform extends StatelessWidget {
                       ))
                   .toList());
         }
-        return Center(child: CircularProgressIndicator());
+        return Center(child: CustomLoader());
       },
     );
   }
@@ -99,7 +100,7 @@ class GamesByBrowserPlatform extends StatelessWidget {
                       ))
                   .toList());
         }
-        return Center(child: CircularProgressIndicator());
+        return Center(child: CustomLoader());
       },
     );
   }
@@ -150,7 +151,7 @@ class GamesByPcPlatform extends StatelessWidget {
                       ))
                   .toList());
         }
-        return Center(child: CircularProgressIndicator());
+        return Center(child: CustomLoader());
       },
     );
   }

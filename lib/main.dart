@@ -1,5 +1,6 @@
 import 'package:catatan/screens/dashboard.dart';
 import 'package:catatan/screens/homePage.dart';
+import 'package:catatan/screens/splashScreen/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Database Games',
       initialRoute: '/',
       routes: {
-        '/': (context) => Homepage(),
+        '/': (context) => SplashScreen(),
         '/dashboard': (context) => Dashboard()
       },
       debugShowCheckedModeBanner: false,
