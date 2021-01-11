@@ -1,0 +1,252 @@
+FutureBuilder<List<GameList>>(
+      future: _allGames,
+      builder: (context, AsyncSnapshot snapshot) {
+        return DefaultTabController(
+          length: 6,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                color: Colors.green[50],
+                child: TabBar(
+                    labelStyle: GoogleFonts.oswald(fontWeight: FontWeight.bold),
+                    isScrollable: true,
+                    indicatorColor: Colors.green,
+                    indicatorSize: TabBarIndicatorSize.values[1],
+                    //indicatorSize: TabBarIndicatorSize.label,
+                    //indicatorPadding: EdgeInsets.only(left: 0, right: 0),
+                    indicatorWeight: 5,
+                    unselectedLabelColor: Colors.black26,
+                    labelColor: Colors.green,
+                    tabs: [
+                      Tab(
+                        text: 'Design',
+                      ),
+                      Tab(
+                        text: 'Romance',
+                      ),
+                      Tab(
+                        text: 'Horror',
+                      ),
+                      Tab(
+                        text: 'Humor',
+                      ),
+                      Tab(
+                        text: 'Adventure',
+                      ),
+                      Tab(
+                        text: 'Science',
+                      )
+                    ]),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 15,
+                color: Colors.green[50],
+                //child: SizedBox(height: 15,),
+              ),
+              Expanded(
+                  child: Container(
+                margin: EdgeInsets.only(left: 15, right: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(8)),
+                ),
+                padding: EdgeInsets.only(left: 15, right: 15),
+                height: 400,
+                child: TabBarView(
+                    dragStartBehavior: DragStartBehavior.start,
+                    children: [_allGamesThumbnail(snapshot.data)]),
+              ))
+            ],
+          ),
+        );
+      },
+    );
+
+
+    id = json['id'],
+      title = json['title'],
+      thumbnail = json['thumbnail'],
+      shortDescription = json['short_description'],
+      gameUrl = json['game_url'],
+      genre = json['genre'],
+      platform = json['platform'],
+      publisher = json['publisher'],
+      developer = json['developer'],
+      releaseDate = json['release_date'],
+      freetogameProfileUrl = json['freetogame_profile_url'],
+
+
+      Card(
+        child: Container(
+         // width: 20,
+         height: 50,
+         decoration: BoxDecoration(
+        borderRadius:
+BorderRadius.circular(10),
+image: DecorationImage(
+image: NetworkImage(
+gamesList.thumbnail),
+fit: BoxFit.fill)),
+                                    ),
+                                  );
+
+
+
+
+                                  Container(
+              child: FutureBuilder(
+                  builder: (context, snapshot) {
+                    var tampilkan = json.decode(snapshot.data.toString());
+                    return Container(
+                      padding: EdgeInsets.only(bottom: 5),
+                      height: 200,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: tampilkan.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            width: 120,
+                            child: Card(
+                              //color: Colors.white38,
+                              semanticContainer: true,
+                              child: Wrap(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.network(
+                                      tampilkan[index]['img'],
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  ListTile(
+                                    dense: true,
+                                    isThreeLine: true,
+                                    title: Text(
+                                      tampilkan[index]['title'],
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w300,
+                                          color: Colors.grey),
+                                    ),
+                                    subtitle: Text(
+                                      tampilkan[index]['text'],
+                                      style: GoogleFonts.oswald(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  future: DefaultAssetBundle.of(context)
+                      .loadString('assets/featured.json')),
+
+
+
+
+
+Column(
+                        children: image
+                            .map(
+                              (GameList thumbnail) => Container(
+                                // width: 20,
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: DecorationImage(
+                                        image:
+                                            NetworkImage(thumbnail.thumbnail),
+                                        fit: BoxFit.fill)),
+                              ),
+                            )
+                            .toList(),
+                      ),
+
+
+
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              height: 50,
+                              child: Center(child: Text('About Game')),
+                              decoration: BoxDecoration(),
+                            ),
+                            Divider(
+                              indent: 70.0,
+                            ),
+                            Container(
+                              width: 100,
+                              height: 50,
+                              child: Center(child: Text('Description')),
+                              decoration: BoxDecoration(),
+                            ),
+                          ],
+                        )
+
+
+
+
+                        Padding(
+                                                        padding: const EdgeInsets.only(left: 0, top: 8),
+                                                        child: Text(
+                                                          'Platform',
+                                                          style: TextStyle(
+                                                            color: Colors.black,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      SizedBox(
+                                                        height: 10,
+                                                      ),
+                                                      Text(
+                                                        gameList.platform,
+                                                        style: TextStyle(
+                                                            color:
+                                                                Colors.black),
+                                                      ),
+
+
+
+
+                                                      GestureDetector(
+      child: Container(
+        child: Center(
+            child: Text(
+          'Go to Game Site',
+          style: GoogleFonts.oswald(
+              color: Colors.white, fontWeight: FontWeight.bold),
+        )),
+        height: 50,
+        width: MediaQuery.of(context).size.width / 2,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: Colors.green[700]),
+      ),
+      onTap: () {
+        setState(() async {
+          String url = 'https://google.com';
+          if (await canLaunch(url)) {
+            await launch(
+              url,
+              forceSafariVC: false,
+              forceWebView: false,
+              headers: <String, String>{'my_header_key': 'my_header_value'},
+            );
+          } else {
+            throw 'Could not launch $url';
+          }
+        });
+      },
+    );

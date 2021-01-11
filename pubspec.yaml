@@ -32,6 +32,10 @@ dependencies:
   http: ^0.12.2
   font_awesome_flutter: ^8.10.0
   flutter_staggered_grid_view: ^0.3.2
+  url_launcher: ^5.7.10
+  flutter_launcher_icons: ^0.8.1
+
+
 
 
 dev_dependencies:
@@ -52,7 +56,18 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - featured.json
-  #   - images/a_dot_ham.jpeg
+     - assets/fps.jpg
+     - assets/mmo.png
+     - assets/mmorpg.png
+     - assets/racing.jpg
+     - assets/strategy.png
+     - assets/game.png
+     - assets/pubg.jpg
+
+flutter_icons:
+  image_path: 'assets/game-icon.png'
+  android: true
+  ios: true
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

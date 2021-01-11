@@ -15,10 +15,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Database Games',
       initialRoute: '/',
       routes: {
-        '/' : (context) => Homepage(),
-        '/dashboard' : (context) => Dashboard()
+        '/': (context) => Homepage(),
+        '/dashboard': (context) => Dashboard()
       },
       debugShowCheckedModeBanner: false,
       // home: '/',
